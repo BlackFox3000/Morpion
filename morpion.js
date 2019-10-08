@@ -77,13 +77,13 @@ function printTabHtml(tab) {
         var i=0, j=0, point=0;
         var d=tab.length;
         var limTab=nombCroix-1;
-        var d2= tab[i].length;
-        while(i<d && j<d2){
-            document.getElementById('historic').innerHTML += '[i: '+i+' j: '+j+' ] <br>';
+        var dj= tab[i].length;
+        while(i<d && j<dj){
+            document.getElementById('historic').innerHTML += '[i: '+i+' j: '+j+' dj:'+ dj+' ] <br>';
             //si la case vaut 1 on test
             if(tab[i][j]==1){
                 //test si il es possible d'avoir une diagonale droite
-                if( j+limTab<=d2 && i+limTab<=d2){
+                if( j+limTab<=dj && i+limTab<=dj){
                     //test diagonale droite
                     if(diagRithIsValide(tab,i,j,nombCroix))
                         point++;
@@ -96,7 +96,7 @@ function printTabHtml(tab) {
                         point++;
                 }
                 //test si iles possible d'avoir une ligne horizontale
-                if( j+limTab<=d2 ){
+                if( j+limTab<=dj ){
                     //tester si ligne horizontale
                     if(lignHorIsValide(tab,i,j,nombCroix))
                         point++;
@@ -109,7 +109,7 @@ function printTabHtml(tab) {
                 }
             }
             j++;
-            if(j=d2){
+            if(j==dj){
                 j=0;
                 i++;
             }
