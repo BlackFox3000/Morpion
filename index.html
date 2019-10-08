@@ -9,9 +9,10 @@
     <header>
         <div id="inner">
          <h1>Morpion<h1>
+         <span id="refresh"> <button>Rafraichir la table</button> </span>
         </div>
     </header>
-    <body>
+    <body onload="initElement();">
         <div class="morpion">
 
                 <div id="print"></div>
@@ -27,17 +28,31 @@
      <script>
                 var tab=[];
                 var test=8;
-                console.log(test.to)
+                //console.log(test.to)
                 tab=initialisationMorpion(tab,5);
                 printTabHtml(tab);
                 // var rand= getRandomInt(2);
-                tab=remplissageMorpion(tab);
-                printTabHtml(tab);
+               // tab=remplissageMorpion(tab);
+                //printTabHtml(tab);
 
                 //diagRithIsValide(tab,0,0,4);
                 //diagLeftIsValide(tab,0,4,4);
                 //lignHorIsValide(tab,0,0,4);
                 //lignVerIsValide(tab,0,0,4);
-               scoreMorpion(tab,3);
+                scoreMorpion(tab,3);
+
+                function refresh(){
+                tab=initialisationMorpion(tab,5);
+                    tab=remplissageMorpion(tab);
+                    printTabHtml(tab);
+                    scoreMorpion(tab,3);
+                    //alert("Evènement de click détecté");
+
+                }
+                function initElement(){
+                    var p = document.getElementById("refresh");
+                    p.onclick =refresh;
+               }
+
                 </script>
 </html>
