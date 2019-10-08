@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <meta charset="UTF-8">
+      <title>Morpion</title>
+        <link rel="stylesheet" href="index.css">
+        <script src="morpion.js"></script>
+    </head>
+    <header>
+        <div id="inner">
+         <h1>Morpion<h1>
+        </div>
+    </header>
+    <body>
+        <div class="morpion">
+
+                <div id="print">
+                </div>
+                <div id="result">
+                </div>
+                <div id="score">
+                </div>
+                <br>
+                Historique parcourt scoreMorpion:
+                <p id="historic"> </p>
+       </div>
+    </body>
+
+     <script>
+                var tab=[];
+                var test=8;
+                console.log(test.to)
+                tab=initialisationMorpion(tab,5);
+                printTabHtml(tab);
+                // var rand= getRandomInt(2);
+                tab=remplissageMorpion(tab);
+                printTabHtml(tab);
+
+                //diagRithIsValide(tab,0,0,4);
+                //diagLeftIsValide(tab,0,4,4);
+                //lignHorIsValide(tab,0,0,4);
+                //lignVerIsValide(tab,0,0,4);
+               scoreMorpion(tab,4);
+                </script>
+</html>
