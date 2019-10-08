@@ -19,6 +19,13 @@ td{
     padding: 0;
 }
 
+#score{
+    background-color: darkviolet;
+    border: solid;
+    border: aliceblue;
+    font-size: x-large;
+}
+
 
 
 #un{
