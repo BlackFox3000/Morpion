@@ -40,7 +40,6 @@ function printTabHtml(tab) {
     //console.log(print);
 }
 
-
 //obtenir un chiffre random entee 0 et max
     function getRandomInt(max) {
         var result=Math.floor(Math.random() * Math.floor(max));
@@ -83,26 +82,25 @@ function printTabHtml(tab) {
             //si la case vaut 1 on test
             if(tab[i][j]==1){
                 //test si il es possible d'avoir une diagonale droite
-                if( j+limTab<=dj && i+limTab<=dj){
+                if( j+limTab<dj && i+limTab<d){
                     //test diagonale droite
                     if(diagRithIsValide(tab,i,j,nombCroix))
                         point++;
-
                 }
                 //test si il es possible d'avoir une diagonale gauche
-                if( j-limTab>=0 && i+limTab<=d){
+                if( j-limTab>=0 && i+limTab<d){
                     //test diagonale gauche
                     if(diagLeftIsValide(tab,i,j,nombCroix))
                         point++;
                 }
                 //test si iles possible d'avoir une ligne horizontale
-                if( j+limTab<=dj ){
+                if( j+limTab<dj ){
                     //tester si ligne horizontale
                     if(lignHorIsValide(tab,i,j,nombCroix))
                         point++;
                 }
                 //test si iles possible d'avoir une ligne verticale
-                if( i+limTab<=d){
+                if( i+limTab<d){
                     //tester si ligne verticale
                     if(lignVerIsValide(tab,i,j,nombCroix))
                         point++;
