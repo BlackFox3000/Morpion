@@ -71,7 +71,7 @@ function printTabHtml(tab) {
 
 
 
-    //comptabilisé le nombre de fois où 4 "1" sont alignés
+    //comptabilisé le nombre de fois où nombCroix "1" sont alignés
     function scoreMorpion(tab,nombCroix){
         var i=0, j=0, point=0;
         var d=tab.length;

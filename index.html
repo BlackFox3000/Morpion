@@ -8,7 +8,7 @@
     </head>
     <header>
         <div id="inner">
-         <h1>Morpion<h1>
+         <h1>Morpion</h1>
          <span id="refresh"> <button>Rafraichir/Initialiser la table</button> </span>
         </div>
     </header>
@@ -26,8 +26,8 @@
     </body>
 
      <script>
-                var tab=[];
-                var test=8;
+                let tab=[];
+                let test=8, nbcroix=4;
                 //console.log(test.to)
                 tab=initialisationMorpion(tab,5);
                 printTabHtml(tab);
@@ -39,18 +39,18 @@
                 //diagLeftIsValide(tab,0,4,4);
                 //lignHorIsValide(tab,0,0,4);
                 //lignVerIsValide(tab,0,0,4);
-                scoreMorpion(tab,3);
+                scoreMorpion(tab,nbcroix);
 
                 function refresh(){
                 tab=initialisationMorpion(tab,5);
                     tab=remplissageMorpion(tab);
                     printTabHtml(tab);
-                    scoreMorpion(tab,3);
+                    scoreMorpion(tab,nbcroix);
                     //alert("Evènement de click détecté");
 
                 }
                 function initElement(){
-                    var p = document.getElementById("refresh");
+                    let p = document.getElementById("refresh");
                     p.onclick =refresh;
                }
 
